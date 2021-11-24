@@ -1,11 +1,6 @@
-#### React Router Fix
+I built this cocktail app that consumes the cocktail API. This app basically showsa variety of cocktails availble.
+It gives users access to filter through and search for a specific cocktail.
+It also display specicfically selected cocktails.
+This was an exciting project that has helped me understand so many React concepts.
 
-(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
-
-#### CRA Fix
-
-```
-
-"build": "CI= react-scripts build",
-
-```
+My next projects calls, I gotta go!!!
