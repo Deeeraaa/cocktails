@@ -1,35 +1,40 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 // import pages
-import Home from './pages/Home'
-import About from './pages/About'
-import SingleCocktail from './pages/SingleCocktail'
-import Error from './pages/Error'
+import Home from "./pages/Home";
+import About from "./pages/About";
+import SingleCocktail from "./pages/SingleCocktail";
 // import components
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <Router>
       <Navbar />
-          <Switch>
+      <Switch>
+
+
         <Route exact path="/">
           <Home />
         </Route>
 
-         <Route exact path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
 
-         <Route exact path="/cocktail/:id">
+        <Route exact path="/cocktail/:id">
           <SingleCocktail />
         </Route>
-
-         <Route exact path="*">
-          <Error />
+        <Route exact path="*">
+        <Redirect exact from="/cocktail/:id" to="/" />
         </Route>
-          </Switch>
+      </Switch>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
